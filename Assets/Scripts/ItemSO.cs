@@ -7,6 +7,7 @@ public class ItemSO : ScriptableObject
 {
     public string itemName;
     public Sprite itemSprite;
+    public int price;
 
 
     public GameObject worldPrefab;

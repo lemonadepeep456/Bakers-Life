@@ -213,7 +213,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 68ccbb82e3b722241b5465479a898bea, type: 3}
   - {fileID: 21300000, guid: cc5879494757fb24c9620a367257e7bd, type: 3}
   - {fileID: 21300000, guid: 7c573ff2c2769384ead46407027d4972, type: 3}
-  spriteRenderer: {fileID: 2326439237656998915, guid: 3a4a6334961244b41b1c8f397bcb26f9, type: 3}
+  spriteRenderer: {fileID: 905389002607151383}
 --- !u!61 &2420230273087250044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -487,10 +487,14 @@ PrefabInstance:
     - target: {fileID: 2326439237656998915, guid: 3a4a6334961244b41b1c8f397bcb26f9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 68ccbb82e3b722241b5465479a898bea, type: 3}
+      objectReference: {fileID: 21300000, guid: cc5879494757fb24c9620a367257e7bd, type: 3}
     - target: {fileID: 2326439237656998915, guid: 3a4a6334961244b41b1c8f397bcb26f9, type: 3}
       propertyPath: m_SortingLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326439237656998915, guid: 3a4a6334961244b41b1c8f397bcb26f9, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7032356481035047261, guid: 3a4a6334961244b41b1c8f397bcb26f9, type: 3}
       propertyPath: m_Pivot.x
@@ -581,6 +585,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a4a6334961244b41b1c8f397bcb26f9, type: 3}
+--- !u!212 &905389002607151383 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2326439237656998915, guid: 3a4a6334961244b41b1c8f397bcb26f9, type: 3}
+  m_PrefabInstance: {fileID: 3231819443095125268}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5570469353270291529 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7032356481035047261, guid: 3a4a6334961244b41b1c8f397bcb26f9, type: 3}

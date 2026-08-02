@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Regular Burger
   itemSprite: {fileID: 21300000, guid: 2f762e2acdd609840a48bc6a68d16817, type: 3}
+  price: 8
   worldPrefab: {fileID: 5745449021535407993, guid: eafd6a5011df3db458e04cfa0f216223, type: 3}

@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
+
 
 public class Customer : MonoBehaviour
 {
@@ -19,9 +18,13 @@ public class Customer : MonoBehaviour
     public Image orderIcon;
     public Sprite[] customerSprites; //Array to put in customer sprites
     public SpriteRenderer spriteRenderer;
+    private PlayerHoldingScript player;
+    private bool playerInRange;
+
     void Start()
     {
         // Pick a random menu item
+
         requestedItem = menuItems[Random.Range(0, menuItems.Length)];
 
         // Display the item's name
@@ -34,27 +37,30 @@ public class Customer : MonoBehaviour
 
         Debug.Log("Customer wants " + requestedItem.itemName);
         int randomSprite = Random.Range(0, customerSprites.Length); //Customer Sprite randomizer
-
         spriteRenderer.sprite = customerSprites[randomSprite];
+        Debug.Log("Assigned sprite: " + spriteRenderer.sprite.name);
         Invoke(nameof(CustomerLeaves), waitTime);
+        OrderManagerScript.Instance.AddCustomer(this); //Adds customer to the order list
     }
 
-    public void ServeCustomer(ItemSO item)
+
+    public bool ServeCustomer(ItemSO item)
     {
-        if (served) return;
+        if (served) return false;
 
         if (item == requestedItem)
         {
             served = true;
-
             FindObjectOfType<CustomerSpawner>().ClearSpot(spawnIndex);
-
+            MoneyManager.Instance.AddMoney(requestedItem.price);
             Debug.Log("Correct order!");
+            OrderManagerScript.Instance.RemoveCustomer(this); //Removes a customer within the order list
+            return true;
 
-            Destroy(gameObject); // eeewewewew
         }
-    }
 
+        return false;
+    }
     void CustomerLeaves()
     {
         if (served) return;
@@ -64,24 +70,40 @@ public class Customer : MonoBehaviour
         FindObjectOfType<CustomerSpawner>().ClearSpot(spawnIndex);
 
         Destroy(gameObject);
+       
     }
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player"))
             return;
 
+        player = other.GetComponent<PlayerHoldingScript>();
+        playerInRange = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (!other.CompareTag("Player"))
+            return;
+
+        playerInRange = false;
+        player = null;
+    }
+
+    private void Update()
+    {
+        if (!playerInRange || player == null)
+            return;
+        
         if (Input.GetKeyDown(KeyCode.E))
         {
-            PlayerHoldingScript player = other.GetComponent<PlayerHoldingScript>();
-
             if (player.heldItem == null)
                 return;
 
-            ServeCustomer(player.heldItem);
-
-            if (served)
+            if (ServeCustomer(player.heldItem))
             {
                 player.ClearItem();
+                Destroy(gameObject);
             }
         }
     }
