@@ -41,5 +41,6 @@ public class CustomerSpawner : MonoBehaviour
     public void ClearSpot(int index)
     {
         occupied[index] = false;
+
     }
 }

@@ -66,12 +66,14 @@ public class Customer : MonoBehaviour
         if (served) return;
 
         Debug.Log("Customer got tired and left.");
+        OrderManagerScript.Instance.RemoveCustomer(this);
 
         FindObjectOfType<CustomerSpawner>().ClearSpot(spawnIndex);
 
         Destroy(gameObject);
        
     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player"))
