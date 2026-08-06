@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
-    public float FollowSpeed = 2f; //How fast the camera follows the player
-    public float yOffset = 1f; //Offset
-    public Transform target; //the game object it's following
+    public float FollowSpeed = 2f;
+    public float yOffset = 1f;
+    public Transform target;
 
-    // Start is called before the first frame update
-    void Start()
+    void LateUpdate()
     {
+        // Prevents WebGL from crashing if target is missing
+        if (target == null) return;
 
-    }
+        Vector3 newPos = new Vector3(target.position.x, target.position.y + yOffset, -10f);
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y + yOffset, -10f); //makes it follow to its position
-        transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime); //detects the amount of time its taking to get to the position(hence follow speed and the target)
-
+        // Lerp is generally preferred over Slerp for flat 2D tracking
+        transform.position = Vector3.Lerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
     }
 }

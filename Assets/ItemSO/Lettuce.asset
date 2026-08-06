@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ee7432f0f0669c46842818f29d07ef0, type: 3}
-  m_Name: Plain Burger
+  m_Name: Lettuce
   m_EditorClassIdentifier: 
-  itemName: Burger
-  itemSprite: {fileID: 21300000, guid: 00b9d810fc5f158419b9276fda3f4b7c, type: 3}
-  worldPrefab: {fileID: 6946020234704204335, guid: b7a8e474cecac224d950a2545de9249c, type: 3}
-  price: 6
-  requiresCooking: 0
+  itemName: Lettuce
+  itemSprite: {fileID: 0}
+  price: 0
+  worldPrefab: {fileID: 0}

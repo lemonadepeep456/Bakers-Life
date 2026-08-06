@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Deluxe Burger
   itemSprite: {fileID: 21300000, guid: 1bea8652f5dbed64ca1dd58cdead259c, type: 3}
-  price: 11
   worldPrefab: {fileID: 6988455473702487857, guid: 32175b125bfef054db0a2fab61ca2762, type: 3}
+  price: 11
+  requiresCooking: 0

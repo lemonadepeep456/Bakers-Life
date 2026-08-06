@@ -18,7 +18,7 @@ public class CustomerSpawner : MonoBehaviour
         InvokeRepeating(nameof(SpawnCustomer), 1f, spawnTime);
     }
 
-    void SpawnCustomer()
+    void SpawnCustomer() //SpawnCustomer Class
     {
         int point;
 

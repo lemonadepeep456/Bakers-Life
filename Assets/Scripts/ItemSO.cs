@@ -1,24 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
+[System.Serializable]
+public class CookingRecipe
+{
+    [Header("Input")]
+
+    // Item placed onto the station.
+    public ItemSO inputItem;
+
+    [Header("Output")]
+
+    // Item received after cooking.
+    public ItemSO outputItem;
+
+    [Header("Cooking")]
+
+    // Time this recipe takes.
+    public float cookTime = 5f;
+}
 public class ItemSO : ScriptableObject
 {
     public string itemName;
     public Sprite itemSprite;
+    public GameObject worldPrefab;
+
     public int price;
 
+    [Header("Cooking")]
 
-    public GameObject worldPrefab;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Does this item need to be cooked?
+    public bool requiresCooking;
 }
