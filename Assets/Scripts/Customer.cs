@@ -23,55 +23,103 @@ public class Customer : MonoBehaviour
 
     void Start()
     {
-        // Pick a random menu item
+        requestedItem = menuItems[
+            Random.Range(0, menuItems.Length)
+        ];
 
-        requestedItem = menuItems[Random.Range(0, menuItems.Length)];
+        if (requestedItem == null)
+        {
+            Debug.LogError(
+                "Customer has no valid requested ItemSO!"
+            );
 
-        // Display the item's name
+            return;
+        }
+
         if (orderText != null)
             orderText.text = requestedItem.itemName;
 
-        // Display the item's icon
         if (orderIcon != null)
             orderIcon.sprite = requestedItem.itemSprite;
 
-        Debug.Log("Customer wants " + requestedItem.itemName);
-        int randomSprite = Random.Range(0, customerSprites.Length); //Customer Sprite randomizer
-        spriteRenderer.sprite = customerSprites[randomSprite];
-        Debug.Log("Assigned sprite: " + spriteRenderer.sprite.name);
-        Invoke(nameof(CustomerLeaves), waitTime);
-        OrderManagerScript.Instance.AddCustomer(this); //Adds customer to the order list
-    }
+        Debug.Log(
+            "CUSTOMER ORDER: " +
+            requestedItem.itemName
+        );
 
+        if (customerSprites.Length > 0)
+        {
+            int randomSprite =
+                Random.Range(0, customerSprites.Length);
+
+            spriteRenderer.sprite =
+                customerSprites[randomSprite];
+        }
+
+        Invoke(nameof(CustomerLeaves), waitTime);
+
+        if (OrderManagerScript.Instance != null)
+        {
+            OrderManagerScript.Instance.AddCustomer(this);
+        }
+        else
+        {
+            Debug.LogError(
+                "Customer could not find OrderManagerScript!"
+            );
+        }
+    }
 
     public bool ServeCustomer(ItemSO item)
     {
-        if (served) return false;
+        if (served)
+            return false;
 
-        if (item == requestedItem)
+        if (item != requestedItem)
+            return false;
+
+        served = true;
+
+        CancelInvoke(nameof(CustomerLeaves));
+
+        Object.FindAnyObjectByType<CustomerSpawner>()
+            .ClearSpot(spawnIndex);
+
+        if (MoneyManager.Instance != null)
         {
-            served = true;
-            FindObjectOfType<CustomerSpawner>().ClearSpot(spawnIndex);
-            MoneyManager.Instance.AddMoney(requestedItem.price);
-            Debug.Log("Correct order!");
-            OrderManagerScript.Instance.RemoveCustomer(this); //Removes a customer within the order list
-            return true;
-
+            MoneyManager.Instance.AddMoney(
+                requestedItem.price
+            );
         }
 
-        return false;
+        Debug.Log(
+            "Correct order! Customer served."
+        );
+
+        if (OrderManagerScript.Instance != null)
+        {
+            OrderManagerScript.Instance.RemoveCustomer(this);
+        }
+
+        Destroy(gameObject);
+
+        return true;
     }
     void CustomerLeaves()
     {
-        if (served) return;
+        if (served)
+            return;
 
         Debug.Log("Customer got tired and left.");
-        OrderManagerScript.Instance.RemoveCustomer(this);
 
-        FindObjectOfType<CustomerSpawner>().ClearSpot(spawnIndex);
+        if (OrderManagerScript.Instance != null)
+        {
+            OrderManagerScript.Instance.RemoveCustomer(this);
+        }
+
+        Object.FindAnyObjectByType<CustomerSpawner>().ClearSpot(spawnIndex);
 
         Destroy(gameObject);
-       
     }
 
     private void OnTriggerEnter2D(Collider2D other)

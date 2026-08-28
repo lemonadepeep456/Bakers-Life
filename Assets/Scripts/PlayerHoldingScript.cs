@@ -29,10 +29,24 @@ public class PlayerHoldingScript : MonoBehaviour
     public void ClearItem()
     {
         if (heldObject != null)
+        {
             Destroy(heldObject);
+        }
 
         heldObject = null;
         heldItem = null;
+    }
+
+    public GameObject RemoveHeldItem()
+    {
+        GameObject item = heldObject;
+
+        Debug.Log("Removing held item: " + item);
+
+        heldObject = null;
+        heldItem = null;
+
+        return item;
     }
 } 
     

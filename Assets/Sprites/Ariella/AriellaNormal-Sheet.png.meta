@@ -1,0 +1,390 @@
+fileFormatVersion: 2
+guid: f0913559a4a3cff48b64cdbfea50f9ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8216931573127971904
+    second: AriellaNormal-Sheet_0
+  - first:
+      213: -261320302894092347
+    second: AriellaNormal-Sheet_1
+  - first:
+      213: -3889988304195604592
+    second: AriellaNormal-Sheet_2
+  - first:
+      213: 8337008543599418416
+    second: AriellaNormal-Sheet_3
+  - first:
+      213: -2054784206064896949
+    second: AriellaNormal-Sheet_4
+  - first:
+      213: 5873428243930470109
+    second: AriellaNormal-Sheet_5
+  - first:
+      213: 2030866305290500298
+    second: AriellaNormal-Sheet_6
+  - first:
+      213: 6573793785549174475
+    second: AriellaNormal-Sheet_7
+  - first:
+      213: -4694069084418868785
+    second: AriellaNormal-Sheet_8
+  - first:
+      213: -8709934672123191294
+    second: AriellaNormal-Sheet_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AriellaNormal-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 322
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cbf308f44897fd80800000000000000
+      internalID: -8216931573127971904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AriellaNormal-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 0
+        width: 322
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf666da19a9f5cf0800000000000000
+      internalID: -261320302894092347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AriellaNormal-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 0
+        width: 322
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09f2ff35f3cf30ac0800000000000000
+      internalID: -3889988304195604592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AriellaNormal-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 0
+        width: 322
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03cd3aa591103b370800000000000000
+      internalID: 8337008543599418416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AriellaNormal-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 0
+        width: 322
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b443b6bb6a0fb73e0800000000000000
+      internalID: -2054784206064896949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AriellaNormal-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3359
+        y: 0
+        width: 322
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6d83d7edb928150800000000000000
+      internalID: 5873428243930470109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AriellaNormal-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 0
+        width: 322
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac8762905261f2c10800000000000000
+      internalID: 2030866305290500298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AriellaNormal-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 4639
+        y: 0
+        width: 322
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc634565e9eca3b50800000000000000
+      internalID: 6573793785549174475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AriellaNormal-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 5279
+        y: 0
+        width: 322
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9f118b9015bdeb0800000000000000
+      internalID: -4694069084418868785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AriellaNormal-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 5919
+        y: 0
+        width: 322
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2002d3b1098102780800000000000000
+      internalID: -8709934672123191294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AriellaNormal-Sheet_0: -8216931573127971904
+      AriellaNormal-Sheet_1: -261320302894092347
+      AriellaNormal-Sheet_2: -3889988304195604592
+      AriellaNormal-Sheet_3: 8337008543599418416
+      AriellaNormal-Sheet_4: -2054784206064896949
+      AriellaNormal-Sheet_5: 5873428243930470109
+      AriellaNormal-Sheet_6: 2030866305290500298
+      AriellaNormal-Sheet_7: 6573793785549174475
+      AriellaNormal-Sheet_8: -4694069084418868785
+      AriellaNormal-Sheet_9: -8709934672123191294
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
